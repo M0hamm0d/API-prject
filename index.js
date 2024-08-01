@@ -5,12 +5,12 @@ let currentPage = 1;
 let row = 15;
 let number = document.querySelectorAll('.item');
 console.log(number);
-let inputData = ""
+let inputData = "";
 
 const displayList = function(items, wrapper, cardsPerPage, page){
     wrapper.innerHTML = "";
     page--;
-    let start = cardsPerPage * page; //5 * 0
+    let start = cardsPerPage * page;
     let end = start + cardsPerPage
     let paginatedItem = items.slice(start, end);
     for (let i = 0; i < paginatedItem.length; i++){
@@ -121,19 +121,8 @@ let searchFilter = () => {
                         `
                         wrapper.insertAdjacentHTML('afterbegin', html);
                     }
-                    // let li = listElement.querySelectorAll('.item');
-                    // for (let l of li){
-                    //     const el = l.getElementsByClassName('country-name')[0];
-                    //     let textValue = el.textContent || a.innerText;
-                    //     if (textValue.toUpperCase().indexOf(input) > -1) {
-                    //         l.style.display = "";
-                    //     } else {
-                    //         l.style.display = "none";
-                    //     }
-                    // }
                     let li = listElement.querySelectorAll('.item');
                     for (let i = 0; i < li.length; i++) {
-                        //const el = li[i].getElementsByTagName('h3')[0];
                         const el = li[i].getElementsByClassName('country-name')[0]
                         let textValue = el.textContent || el.innerText;
                         if (textValue.toUpperCase().indexOf(Input.toUpperCase()) > -1) {
@@ -155,41 +144,6 @@ let searchFilter = () => {
                     displayList(smt, listElement, row, currentPage);
                     setUpPagination(smt, paginationElement,row);
                 });
-            }
-
-
-            // let input = document.getElementById('searchPopularResult').value.toUpperCase();
-            // let li = listElement.querySelectorAll('item');
-            // for (let i = 0; i < li.length; i++) {
-            //     const el = li[i].getElementsByTagName('h3')[0];
-            //     let textValue = el.textContent || a.innerText;
-            //     if (textValue.toUpperCase().indexOf(input) > -1) {
-            //         li[i].style.display = "";
-            //     } else {
-            //         li[i].style.display = "none";
-            //     }
-            // }; 
-                
-            // }
-            // let smt = result.map(result=> result);
-            // displayList1(smt, listElement, row, currentPage);
+            }      
         });
-
 };
-
-
-
-
-// const prev = ()=>{
-//     let previous = document.getElementById('back')
-//         // let link = document.getElementsByClassName('item')
-//         previous.addEventListener('click', (e)=>{
-//         let activeB = document.querySelector('.active')
-//         if(currentPage > 1){
-//             currentPage--;
-            
-//         };
-//         return previous;
-//     })
-
-// }

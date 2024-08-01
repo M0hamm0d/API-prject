@@ -81,6 +81,7 @@ main .list .item:last-of-type{
     background-color: #fff;
     color: #0d6efd;
     font-size: 16px;
+    width: 35px;
 }
 .pagenumbers button:hover, .ctrl:hover{
     background-color: #0d6efd;
