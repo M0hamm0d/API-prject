@@ -1,5 +1,14 @@
+let arr1 =[1,2,3,4,5]
+arr1.slice(2,3);
+console.log(arr1.slice(2,3));
+console.log(arr1);
+
+let arr2 =[1,2,3,4,5]
+arr2.splice(2,1);
+console.log(arr1.splice(2,1));
+console.log(arr2);
+
 const listElement = document.querySelector('#list');
-console.log(listElement);
 const paginationElement = document.getElementById('pagination');
 let currentPage = 1;
 let row = 15;
@@ -32,7 +41,6 @@ const displayList = function(items, wrapper, cardsPerPage, page){
         `
         wrapper.insertAdjacentHTML('afterbegin', html);
     }
-    
 }
 
 function setUpPagination(items, wrapper, cardsPerPage) {
