@@ -8,7 +8,6 @@ console.log(number);
 let inputData = "";
 
 const displayList = function (items, wrapper, cardsPerPage, page) {
-  //displayList(mapResult, listElement, row, currentPage);
   wrapper.innerHTML = "";
   page--;
   let start = cardsPerPage * page;
@@ -48,12 +47,10 @@ function paginationButton(page, items) {
     currentButton.classList.remove("active");
     button.classList.add("active");
   });
-  //console.log(button);
   return button;
 }
 
 function setUpPagination(items, wrapper, cardsPerPage) {
-  //setUpPagination(mapResult, paginationElement, row);
   wrapper.innerHTML = "";
   let pageCount = Math.ceil(items.length / cardsPerPage);
 
@@ -144,55 +141,3 @@ let searchFilter = () => {
       }
     });
 };
-
-//The end
-
-//if (Input !== "") {
-//     listElement.innerHTML = "";
-//   } else {
-//     let arr = fetch(
-//       "https://restcountries.com/v3.1/all?fields=name,capital,flags"
-//     )
-//       .then((result) => result.json())
-//       .then((result) => {
-//         let smt = result.map((result) => result);
-//         displayList(smt, listElement, row, currentPage);
-//         setUpPagination(smt, paginationElement, row);
-//         for (let res of result) {
-//         }
-//       });
-//   }
-
-//const displayList1 = function (items, wrapper, cardsPerPage, page) {
-//   for (let i = 0; i < result.length; i++) {
-// let html = `
-//     <div class = "item">
-//         <div class = "name">
-//             <p class= "one">Name:<p/>
-//             <p class= "country-name">${result[i].name.common}<p/>
-//         </div>
-//         <div class = "name">
-//             <p class = "one">Capital:<p/>
-//             <p>${result[i].capital[0]}<p/>
-//         </div>
-//         <div class = "flag">
-//             <img src= "${result[i].flags.svg}"/>
-//         </div>
-
-//     <div/>
-// `;
-// wrapper.insertAdjacentHTML("afterbegin", html);
-//   }
-//   let li = listElement.querySelectorAll(".item");
-//   for (let i = 0; i < li.length; i++) {
-//     const el = li[i].getElementsByClassName("country-name")[0];
-//     let textValue = el.textContent || el.innerText;
-//     if (textValue.toUpperCase().indexOf(Input.toUpperCase()) > -1) {
-//       li[i].style.display = "";
-//     } else {
-//       li[i].style.display = "none";
-//     }
-//   }
-// };
-//let smt = result.map((result) => result);
-//displayList1(smt, listElement, row, currentPage);
